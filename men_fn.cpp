@@ -26,4 +26,5 @@ int main() {
 
 	auto access_data = mem_fn(&Test::data);
 	cout << access_data(test) << endl;
+	
 }
