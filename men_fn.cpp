@@ -9,7 +9,8 @@ public:
 		cout << "hello world" << endl;
 	}
 	void display_number(int i) {
-		cout << "number : " << i << endl;
+		data = i;
+		cout << "number : " << data << endl;
 	}
 	int data;
 };
@@ -26,5 +27,9 @@ int main() {
 
 	auto access_data = mem_fn(&Test::data);
 	cout << access_data(test) << endl;
-	
+
+	std::function<void(Test&, int)> f_display_num = &Test::display_number;
+	f_display_num(test, 777);
+
+	cout << access_data(test) << endl; 
 }
