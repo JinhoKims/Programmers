@@ -5,27 +5,34 @@ using namespace std;
 class Weapon {
 public:
 	  virtual void func(int v) {
-		cout << "weapon" << endl;
+		cout << "Weapon" << endl;
 	}
 };
 
 class Gun : public Weapon {
 public:
-	 void func(double k)  {
-		cout << "gun" << endl;
+	 virtual void func(double k) {
+		cout << "Gun" << endl;
 	}
 };
 
 class AK : public Gun {
 public:
-	void func(int x) override  {
-		cout << "AK" << endl;
+	void func(int x) override {
+		cout << "Weapon-AK" << endl;
+	}
+
+	void func(double x) override {
+		cout << "Gun-AK" << endl;
 	}
 };
 
 int main() {
 
 	Weapon * wps = new AK();
-	wps->func(31.25);
+	Gun * wps2 = new AK();
+
+	wps->func(41);
+	wps2->func(234.52);
 	
 }
