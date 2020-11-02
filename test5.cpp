@@ -37,7 +37,7 @@ namespace Tz {
 	int v;
 }
 
-using my_vector = std::vector<Animal>; // usingÀÇ »ç¿ë¹ý
+using my_vector = std::vector<Animal>; // using ì‚¬ìš©ë²•
 
 int main()
 {
