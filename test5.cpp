@@ -37,7 +37,7 @@ namespace Tz {
 	int v;
 }
 
-using my_vector = std::vector<Animal>; // using 사용법
+using my_vector = std::vector<Animal>; // using의 사용법
 
 int main()
 {
